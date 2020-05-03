@@ -1,0 +1,7 @@
+stage 1: _ When run, Topic will get message from Generator. 
+
+stage 2: _ If msgID match with TopicID then Topic will notify all Clients subscribed to receive message.
+
+stage 3: _ Notification from Topic make " status " variable in Client change and update method will execute.
+
+///test/test

@@ -1,0 +1,21 @@
+Begin with objec from class Vector: vector={} 
+We have arr[]={1,2,3,4,5};//for	push_front/back
+-----------------------------------------------
+Function - Vector of class - test: 
+
+Step 1.push_back_front_process(vector);
+Push every single element of arr[] into object-vector by position.
+Function used: push_front();push_back();front();back();
+
+Step 2.pop_back_front_function(vector);
+Test to erase first/last elements of object-vector by
+pop_back();pop_front() function.
+
+Step 3.insert_erase_function(vector);
+use insert()/erase() function element of object-vector at any position from index.
+
+Step 4.test_empty_clear(vector);
+test empty() and clear() function 
+
+Step 5.test_front()_back()_index[](vector):
+test if vector is empty or input index out of range.

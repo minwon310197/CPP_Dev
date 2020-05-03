@@ -1,0 +1,46 @@
+Memory layout of a C++ program
+1d ago
+Typically, a program has five different areas of memory allocated.
+
+
+Code Segment
+
+It is also called text segment where the compiled program sits in memory. The code segment is typically read-only.
+
+BSS Segment
+
+It is also call the uninitialized data segment, where zero-initialized global and static variables are stored.
+
+Data Segment
+
+It is also call the initialized data segment, where initialized global and static variables are stored.
+
+The BSS and Data segments are allocated when the program is first loaded into memory, and their size does not change while it runs.
+
+Heap Segment
+
+It holds dynamically allocated variables.
+In C++, when you use the new operator to allocate memory, this memory is allocated in the application’s heap segment.
+
+int* array = new int[10] // array  is assigned 40 bytes in the heap
+Advantage:
+
+Because the heap is a big pool of memory, large arrays, structures, or classes can be allocated here.
+
+Disadvantage:
+
+Allocating memory on the heap is comparatively slow.
+Dynamically allocated memory must be accessed through a pointer. De-referencing a pointer is slower than accessing variable directly.
+Allocated memory stays allocated until it is specially de-allocated (use delete operator in C++) or the application ends. Therefore, we need to beware memory leaks.
+Stack Segment
+
+It stores function parameters, local variables and other function related information.
+
+Advantage:
+
+Allocating memory on the heap is comparatively fast.
+Allocated memory on the stack stays in scope as long as it is on the stack. It is destroyed when it is popped off the stack.
+Allocated memory on the stack is known at the compile time. This memory can be accessed through a variable.
+Disadvantage:
+
+Because the stack is relatively small, it is not a good idea to pass by value or create local variables of large arrays or other memory-intensive structure. Consequently, it leads to Stack Overflow.

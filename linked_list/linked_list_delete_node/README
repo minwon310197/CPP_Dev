@@ -1,0 +1,94 @@
+//Given only a pointer/reference to a node to be deleted in a singly linked list, how do you delete it?
+/*
+Given a pointer to a node to be deleted, delete the node. Note that we don’t have pointer to head node.
+Recommended: Please solve it on “PRACTICE” first, before moving on to the solution.
+ 
+A simple solution is to traverse the linked list until you find the node you want to delete. But this solution requires pointer to the head node which contradicts the problem statement.
+ 
+Fast solution is to copy the data from the next node to the node to be deleted and delete the next node. Something like following.
+*/
+ 
+/*
+You are given a pointer/ reference to the node which is to be deleted from the linked list of N nodes. The task is to delete the node. Pointer/ reference to head node is not given. 
+ 
+Note: No head reference is given to you.
+ 
+Input Format:
+First line of input contains number of testcases T. For each testcase, first line of input contains length of linked list and next line contains the data of the linked list. The last line contains the node to be deleted.
+ 
+Output Format:
+For each testcase, in a newline, print the linked list after deleting the given node.
+ 
+Your Task:
+This is a function problem. You only need to complete the function deleteNode that takes reference to the node that needs to be deleted. The printing is done automatically by the driver code.
+ 
+Constraints:
+1 <= T <= 100
+1 <= N <= 103
+ 
+Example:
+Input:
+2
+2
+1 2
+1
+4
+10 20 4 30
+20
+ 
+Output:
+2
+10 4 30
+ 
+Explanation:
+Testcase 1: After deleting 20 from the linked list, we have remaining nodes as 10, 4 and 30.
+*/
+
+----- TRANSLATE ----------------------------------TO---------------------VIETNAMESE:
+
+
+// Chỉ cung cấp một con trỏ / tham chiếu đến một nút sẽ bị xóa trong danh sách liên kết đơn, làm thế nào để bạn xóa nó?
+/ *
+Đưa ra một con trỏ tới một nút cần xóa, xóa nút đó. Lưu ý rằng chúng tôi không có con trỏ đến nút đầu.
+Khuyến nghị: Trước tiên hãy giải quyết vấn đề này trên PRACTICE, trước khi chuyển sang giải pháp.
+ 
+Một giải pháp đơn giản là duyệt qua danh sách được liên kết cho đến khi bạn tìm thấy nút bạn muốn xóa. Nhưng giải pháp này yêu cầu con trỏ đến nút đầu mâu thuẫn với câu lệnh vấn đề.
+ 
+Giải pháp nhanh là sao chép dữ liệu từ nút tiếp theo sang nút cần xóa và xóa nút tiếp theo. Một cái gì đó như sau.
+* /
+ 
+/ *
+Bạn được cung cấp một con trỏ / tham chiếu đến nút cần xóa khỏi danh sách N nút được liên kết. Nhiệm vụ là xóa nút. Con trỏ / tham chiếu đến nút đầu không được đưa ra.
+ 
+Lưu ý: Không có tài liệu tham khảo đầu được đưa ra cho bạn.
+ 
+Định dạng đầu vào:
+Dòng đầu tiên chứa số lượng testcase T. Đối với mỗi testcase, dòng đầu tiên chứa chiều dài của danh sách được liên kết và dòng tiếp theo chứa dữ liệu của danh sách được liên kết. Dòng cuối cùng chứa nút cần xóa.
+ 
+Định dạng đầu ra:
+Đối với mỗi testcase, trong một dòng mới, in danh sách được liên kết sau khi xóa nút đã cho.
+ 
+Nhiệm vụ của bạn:
+Đây là một vấn đề chức năng. Bạn chỉ cần hoàn thành chức năng removeNode có tham chiếu đến nút cần xóa. Việc in được thực hiện tự động bởi mã trình điều khiển.
+ 
+Các ràng buộc:
+1 <= T <= 100
+1 <= N <= 103
+ 
+Thí dụ:
+Đầu vào:
+2
+2
+1 2
+1
+4
+10 20 4 30
+20
+ 
+Đầu ra:
+2
+10 4 30
+ 
+Giải trình:
+Testcase 1: Sau khi xóa 20 khỏi danh sách được liên kết, chúng ta có các nút còn lại là 10, 4 và 30.
+*

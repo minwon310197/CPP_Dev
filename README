@@ -1,0 +1,22 @@
+Head->>>>>>>
+------------------------------------------------*------------------------------
+Computer Science
++ Data structure and Algorithms
+    - Data structure (Vector, Array, Linked list, Hashtable (hashmap), tree, graph)
+    - Algorithms (Sorting (bubble, selection, insertion, heap, quick, merge), Breadth first search, Depth first search, A*, Djistra)
++ OOP and principals (SOLID)
++ Design pattern
+    - MVC
+    - MVVC
+    - Observer
+    - Singleton
+    - ....
+_ Openting system (I/O, Memory management, parallel processing, ...)
+- Multithreading programming
+- ...
+
+------------------------------------------------*------------------------------
+Process:
+1. linked list : simple example, delete_node.
+2. observer_design_pattern : simple example.
+3. socket programming : simple example. 

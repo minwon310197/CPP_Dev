@@ -1,0 +1,13 @@
+stage1 : compile and run main.cpp (server).
+
+stage2 : compile and run clientSocket.cpp (client).
+
+stage3 : connect client to server by 127.0.0.1(local) or 10.0.2.15 |
+./client 127.0.0.1
+
+stage3 : client send message to server then get services.
+1. subscribe | enter string :"subscribe1"
++ subscribe client to Topic1,...
+2. publish | enter string :"publish1 text"
++ send message to all client that subscribed to Topic1.
+
