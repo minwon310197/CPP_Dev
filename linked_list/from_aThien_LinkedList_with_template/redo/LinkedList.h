@@ -2,6 +2,7 @@
 #define LINKEDLIST_H_
 
 #include <iostream>
+using namespace std;
 
 template <typename DataType>
 class LinkedList
@@ -69,35 +70,77 @@ void LinkedList<DataType>::insertNode(DataType data)
 template <typename DataType>
 typename LinkedList<DataType>::Node* LinkedList<DataType>::searchNode(DataType data)
 {
-   
+   Node* pNode = m_pHead;
+
+   while (pNode != nullptr)
+   {
+      if (pNode->getData() == data)
+      {
+         return pNode;
+      }
+      pNode = pNode->getNextPtr();
+   }
+
+   return nullptr;
 }
 
+template <typename DataType>
+void LinkedList<DataType>::deleteNode(DataType data)
+{
+   Node* pNode = m_pHead;
 
+   // if head node itself hold the key to be deleted 
+   if ((pNode != nullptr) && (pNode->getData() == data))
+   {
+      m_pHead = pNode->getNextPtr();
+      delete pNode;
+      return;
+   }
 
+   Node* pPrev = nullptr;
+   while ((pNode != nullptr) && (pNode->getData() != data))
+   {
+      pPrev = pNode;
+      pNode = pNode->getNextPtr();
+   }
 
+   // if key is not present in linkedlist
+   if (pNode == nullptr)
+   {
+      return;
+   }
 
+   // key is present, unlink the node from linked list
+   pPrev->setNextPtr(pNode->getNextPtr());
+   delete pNode;
+}
 
+template <typename DataType>
+void LinkedList<DataType>::deleteList()
+{
+   Node* current = m_pHead;
+   Node* next = nullptr;
 
+   while (current != nullptr)
+   {
+      next = current->getNextPtr();
+      delete current;
+      current = next;
+   }
 
+   m_pHead = nullptr;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+template <typename DataType>
+void LInkedList(DataType>::printList()
+{
+   Node* pNode = m_pHead;
+   while (pNode != nullptr)
+   {
+      cout << pNode->getData() << " ":
+      pNode = pNode->getNextPtr();
+   }
+   cout << endl;
+}
 
 #endif // ! LINKEDLIST_H_#define LINKEDLIST_H_
