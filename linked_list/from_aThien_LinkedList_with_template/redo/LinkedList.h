@@ -10,11 +10,12 @@ class LinkedList
 public:
    class Node
    {
-   private;
+   private:
       DataType data;
       Node* pNext;
+
    public:
-      Node (DataType value): data(vavlue), pnext(nullptr) {};
+      Node(DataType value) : data(value), pNext(nullptr) {};
       ~Node() {};
 
       void setData(DataType value) { data = value; }
@@ -23,8 +24,10 @@ public:
       void setNextPtr(Node* ptr) { pNext = ptr; }
       Node* getNextPtr() { return pNext; }
    };
+
 private:
    Node* m_pHead;
+
 public:
    LinkedList();
    ~LinkedList();
@@ -32,10 +35,16 @@ public:
    LinkedList(const LinkedList<DataType>&) = delete;
    LinkedList& operator=(const LinkedList<DataType>&) = delete;
 
-   void insertNode (DataType data);
+   void insertNode(DataType data);
    Node* searchNode(DataType data);
    void deleteNode(DataType data);
+   void deleteList();
    void printList();
+};
+
+template <typename DataType>
+LinkedList<DataType>::LinkedList() : m_pHead(nullptr)
+{
 }
 
 template <typename DataType>
@@ -56,7 +65,7 @@ void LinkedList<DataType>::insertNode(DataType data)
    {
       Node* temp = m_pHead;
 
-      //find the last element
+      // find the last element
       while (temp->getNextPtr() != nullptr)
       {
          temp = temp->getNextPtr();
@@ -89,7 +98,7 @@ void LinkedList<DataType>::deleteNode(DataType data)
 {
    Node* pNode = m_pHead;
 
-   // if head node itself hold the key to be deleted 
+   // if head node itself hold the key to be deleted
    if ((pNode != nullptr) && (pNode->getData() == data))
    {
       m_pHead = pNode->getNextPtr();
@@ -104,7 +113,7 @@ void LinkedList<DataType>::deleteNode(DataType data)
       pNode = pNode->getNextPtr();
    }
 
-   // if key is not present in linkedlist
+   // if key is not present in linked list
    if (pNode == nullptr)
    {
       return;
@@ -132,15 +141,15 @@ void LinkedList<DataType>::deleteList()
 }
 
 template <typename DataType>
-void LInkedList(DataType>::printList()
+void LinkedList<DataType>::printList()
 {
    Node* pNode = m_pHead;
    while (pNode != nullptr)
    {
-      cout << pNode->getData() << " ":
+      cout << pNode->getData() << " ";
       pNode = pNode->getNextPtr();
    }
    cout << endl;
 }
 
-#endif // ! LINKEDLIST_H_#define LINKEDLIST_H_
+#endif /* LINKEDLIST_H_ */
