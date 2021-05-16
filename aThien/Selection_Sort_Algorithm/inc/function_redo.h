@@ -15,24 +15,39 @@ void swap(int* varA, int* varB)
 }
 
 //function for selecction sorting
-void selectionSort(int array[],int size)
-{
-    // from zero to theend_loop
-    for ( int zero = 0; zero < size - 1; zero++)
-    {
-        int minIndex = zero;
+// void selectionSort(int array[],int size)
+// {
+//     // from zero to theend_loop
+//     for ( int zero = 0; zero < size - 1; zero++)
+//     {
+//         int minIndex = zero;
 
-        // from zero+1 to the end_loop
-        for ( int zeroPlusOne = zero + 1; zeroPlusOne < size; zeroPlusOne++)
-        {
-            if (array[zeroPlusOne] < array[zero])
-            {
-                minIndex = zeroPlusOne;
-                //then swap
-                swap(&array[zero],&array[minIndex]);                
-            }
-        }
-    }
+//         // from zero+1 to the end_loop
+//         for ( int zeroPlusOne = zero + 1; zeroPlusOne < size; zeroPlusOne++)
+//         {
+//             if (array[zeroPlusOne] < array[zero])
+//             {
+//                 minIndex = zeroPlusOne;
+//                 //then swap
+//                 swap(&array[zero],&array[minIndex]);                
+//             }
+//         }
+//     }
+// }
+
+void selectionSort(int array[], int size) //simplelized
+{
+  
+   for(int firstLoop = 0; firstLoop < (size -1) ; firstLoop++)
+   {
+      for(int secondLoop = firstLoop +1; secondLoop < size; secondLoop++)
+      {         
+         if(array[firstLoop] > array[secondLoop])
+         {
+            swap(&array[firstLoop], &array[secondLoop]);
+         }
+      }
+   }
 }
 
 //function to PRNG array
