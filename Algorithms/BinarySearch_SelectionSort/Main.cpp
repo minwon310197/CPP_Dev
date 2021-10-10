@@ -39,6 +39,6 @@ int main()
         (resultInt == -1) ? std::cout << "Element is not present in array" : std::cout << "Element is present at index " << resultInt;
         printf("\n------------------------------------------------------\n");
     }
-
+    printf("hello world");
     return 0;
 }
