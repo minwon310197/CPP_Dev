@@ -1,8 +1,7 @@
 //Create Linked List
 //Example:
 // A simple C++ program for traversal of a linked list 
-
-#include <bits/stdc++.h>
+#include <iostream>
 #include "src/linked_list.h" 
  
 using namespace std; 
@@ -34,7 +33,7 @@ int main()
     head->data = 1; // assign data in first node 
     head->next = second; // Link first node with second 
  
-    second->data = 2; // assign data to second node 
+    second->data = 5; // assign data to second node 
     second->next = third; 
  
     third->data = 3; // assign data to third node 
@@ -43,6 +42,4 @@ int main()
     printList(head); 
  
     return 0; 
-} 
- 
-// This is code is contributed by rathbhupendra 
+}

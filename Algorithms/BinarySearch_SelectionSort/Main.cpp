@@ -1,5 +1,5 @@
-#include "SelectionSort.h"
-#include "BinarySearchCls.h"
+#include "header/SelectionSort.h"
+#include "header/BinarySearchCls.h"
 
 int globalArray[ARRAY_SIZE];
 unsigned int repeatTime = REPEAT_TIME;

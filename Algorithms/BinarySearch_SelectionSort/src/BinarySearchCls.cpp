@@ -1,4 +1,4 @@
-#include "BinarySearchCls.h"
+#include "../header/BinarySearchCls.h"
 
 BinarySearchCls* BinarySearchCls::_instance = NULL;
 

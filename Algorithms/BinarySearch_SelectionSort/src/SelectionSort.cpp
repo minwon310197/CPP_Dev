@@ -1,4 +1,4 @@
-#include "SelectionSort.h"
+#include "../header/SelectionSort.h"
 
 SelectionSortCls* SelectionSortCls::_instance = NULL;
 
